@@ -53,7 +53,7 @@ class MultiplicationActivity : AppCompatActivity() {
 
         editTextAnswer.setOnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
-                editTextAnswer.setHint("")
+                editTextAnswer.hint = ""
             }
         }
 
@@ -62,6 +62,7 @@ class MultiplicationActivity : AppCompatActivity() {
         buttonOK.setOnClickListener {
 
             val input = editTextAnswer.text.toString()
+
             if (input == "")
             {
                 Toast.makeText(applicationContext,"You need to enter your answer", Toast.LENGTH_LONG).show()
@@ -89,7 +90,6 @@ class MultiplicationActivity : AppCompatActivity() {
 
 
         buttonNext.setOnClickListener {
-            val input = editTextAnswer.text.toString()
 
                 buttonOK.isVisible = true
                 buttonNext.isVisible = false

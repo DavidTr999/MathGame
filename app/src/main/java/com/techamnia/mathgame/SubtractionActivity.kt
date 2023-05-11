@@ -54,7 +54,7 @@ class SubtractionActivity : AppCompatActivity() {
 
         editTextAnswer.setOnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
-                editTextAnswer.setHint("")
+                editTextAnswer.hint = ""
             }
         }
 
@@ -63,6 +63,7 @@ class SubtractionActivity : AppCompatActivity() {
         buttonOK.setOnClickListener {
 
             val input = editTextAnswer.text.toString()
+
             if (input == "") {
                 Toast.makeText(
                     applicationContext,
@@ -93,7 +94,6 @@ class SubtractionActivity : AppCompatActivity() {
 
 
         buttonNext.setOnClickListener {
-            val input = editTextAnswer.text.toString()
 
             buttonOK.isVisible = true
             buttonNext.isVisible = false

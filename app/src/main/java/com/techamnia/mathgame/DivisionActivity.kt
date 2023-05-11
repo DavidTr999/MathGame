@@ -51,7 +51,7 @@ class DivisionActivity : AppCompatActivity() {
 
         editTextAnswer.setOnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
-                editTextAnswer.setHint("")
+                editTextAnswer.hint = ""
             }
         }
 
@@ -87,20 +87,13 @@ class DivisionActivity : AppCompatActivity() {
 
 
         buttonNext.setOnClickListener {
-            val input = editTextAnswer.text.toString()
-            if (input == "") {
-                Toast.makeText(
-                    applicationContext,
-                    "You need to enter your answer",
-                    Toast.LENGTH_LONG
-                ).show()
-            } else {
+
                 buttonOK.isVisible = true
                 buttonNext.isVisible = false
                 pauseTimer()
                 resetTimer()
                 editTextAnswer.setText("")
-            }
+
 
             if (userLife == 0) {
                 Toast.makeText(applicationContext, "Game Over", Toast.LENGTH_LONG).show()

@@ -52,8 +52,9 @@ class AdditionActivity : AppCompatActivity() {
         gameContinue()
 
         editTextAnswer.setOnFocusChangeListener { view, hasFocus ->
+
             if (hasFocus) {
-                editTextAnswer.setHint("")
+                editTextAnswer.hint = ""
             }
         }
 
@@ -62,6 +63,7 @@ class AdditionActivity : AppCompatActivity() {
         buttonOK.setOnClickListener {
 
             val input = editTextAnswer.text.toString()
+
             if (input == "")
             {
             Toast.makeText(applicationContext,"You need to enter your answer", Toast.LENGTH_LONG).show()
